@@ -11,9 +11,10 @@ namespace Subtask___1
             string[] words = new string[n];
             Console.WriteLine("Введите слово");
             string word = null;
-            while ((word != "stop"))
+            int i = 0;
+            while ((word != "stop") & (i < words.Length))
             {
-                int i = 0;
+                
                 if (i < words.Length)
                 {
                     words[i] = word;
@@ -21,8 +22,10 @@ namespace Subtask___1
                 i++;
                 word = Console.ReadLine();
             }
-
-            Console.WriteLine(words);
+            Console.WriteLine("Ввведите индекс массива");
+            int index = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(words[index]);
+            
 
             Console.ReadKey();
         }
