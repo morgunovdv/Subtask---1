@@ -18,14 +18,17 @@ namespace Subtask___1
                 {
                     words[i] = word;
                 }
-                i++;
                 word = Console.ReadLine();
+                i++;
             }
-            Console.WriteLine("Ввведите индекс массива");
-            int index = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine(words[index]);
-            
 
+            while ((word != "stop"))
+            {
+                Console.WriteLine("Ввведите индекс массива");
+                int index = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine(words[index]);
+            }
+                
             Console.ReadKey();
         }
     }
