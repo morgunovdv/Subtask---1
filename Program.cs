@@ -11,20 +11,15 @@ namespace Subtask___1
             string[] words = new string[n];
             Console.WriteLine("Введите слово");
             string word = null;
-            if ((word != "X") || (word != "x"))
+            int i = 0;
+            while ((word != "X") || (word != "x"))
             {
-                for (int i=0; i<words.Length; i++)
+               if (i < words.Length)
                 {
-                    
-                    words[i] = word;
+                    words[i] = Console.ReadLine();
                 }
-                word = Console.ReadLine();
-                return;
-            }
 
-            else
-            {
-                Console.WriteLine("Конец программы");
+                i++;
             }
 
             Console.WriteLine(words);
