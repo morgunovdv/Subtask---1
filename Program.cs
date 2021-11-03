@@ -14,7 +14,6 @@ namespace Subtask___1
             int i = 0;
             while ((word != "stop") & (i < words.Length))
             {
-                
                 if (i < words.Length)
                 {
                     words[i] = word;
