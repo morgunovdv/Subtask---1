@@ -6,29 +6,31 @@ namespace Subtask___1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите число");
+            Console.WriteLine("Введите количество строк, которые хотите использовать");
             int n = Convert.ToInt32(Console.ReadLine());
-            string[] words = new string[n];
-            Console.WriteLine("Введите слово");
-            string word = null;
+            string[] words = new string[n]; 
             int i = 0;
-            while ((word != "stop") & (i < words.Length))
+            while (i < words.Length)
             {
-                if (i < words.Length)
-                {
-                    words[i] = word;
-                }
-                word = Console.ReadLine();
+                words[i] = Console.ReadLine();
                 i++;
             }
-
-            while ((word != "stop"))
+            Console.WriteLine("Все строки введены, выберите строку для отображения");
+            string word = Console.ReadLine();
+            while (word != "X")
             {
-                Console.WriteLine("Ввведите индекс массива");
-                int index = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine(words[index]);
+                int index = Convert.ToInt32(word);
+                if (index < words.Length)
+                {
+                    Console.WriteLine(words[index]);
+                }
+
+                else
+                {
+                    Console.WriteLine("Ошибка");
+                }
             }
-                
+            Console.WriteLine("Работа завершена");
             Console.ReadKey();
         }
     }
