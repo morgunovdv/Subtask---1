@@ -4,7 +4,7 @@ namespace Subtask___1
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             Console.WriteLine("Введите количество строк, которые хотите использовать");
             int n = Convert.ToInt32(Console.ReadLine());
@@ -16,21 +16,32 @@ namespace Subtask___1
                 i++;
             }
             Console.WriteLine("Все строки введены, выберите строку для отображения");
-            string word = Console.ReadLine();
-            while (word != "X")
+            bool b = true;
+            while (b == true)
             {
-                int index = Convert.ToInt32(word);
-                if (index < words.Length)
+                string word = Console.ReadLine();
+                if (word != "X")
                 {
-                    Console.WriteLine(words[index]);
+                    int index = Convert.ToInt32(word);
+                    if (index < words.Length)
+                    {
+                        Console.WriteLine(words[index]);
+                    }
+
+                    else
+                    {
+                        Console.WriteLine("Ошибка");
+                    }
                 }
 
                 else
                 {
-                    Console.WriteLine("Ошибка");
+                    b = false; 
                 }
             }
+
             Console.WriteLine("Работа завершена");
+
             Console.ReadKey();
         }
     }
